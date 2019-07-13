@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>Eclipse</title>
+
+	<link type="text/css" rel="stylesheet" href="css/map.css" />
+
+	<!-- using an internet connection -->
+	<link rel="stylesheet" href="https://js.arcgis.com/4.4/esri/css/main.css">
+
+	<!-- no internet connection, use locally hosted ArcGIS server -->
+	<!--link rel="stylesheet" type="text/css" href="arcgis_js_api/library/3.15/3.15/esri/css/esri.css" /-->
+</head>
+
+<body>
+	<script type="text/javascript" src="js/lib/d3-3.4.13.js"></script>
+	<script type="text/javascript" src="js/lib/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="js/lib/jquery-ui-1.11.2.js"></script>
+	<script type="text/javascript" src="js/lib/jquery.jscrollpane.js"></script>
+	<script type="text/javascript" src="js/lib/jquery.mousewheel.js"></script>
+
+	<script type="text/javascript" src="js/lib/bootstrap-2.3.0.js"></script>
+
+	<script type="text/javascript" src="js/lib/jquery-ui-sliderAccess.js"></script>
+	<script type="text/javascript" src="js/lib/jquery-ui-timepicker-addon.js"></script>
+
+	<!-- using an internet connection -->
+	<script src="https://js.arcgis.com/4.4/"></script>
+
+
+	<script src="js/centerline.js"></script>
+	<script src="js/timelines.js"></script>
+	<script src="js/eclipse.js"></script>
+	<script src="js/eclipse-events.js"></script>
+
+	<script src="js/weather.js"></script>
+	<script src="js/loadMap.js"></script>
+
+	<div id="mapShield" style="display: none;">
+		<img src="img/8yNJ0.gif" />
+	</div>
+	<div id="map">
+	</div>
+
+	
+	<div id="weather">
+			<div id="city">
+				<label class="weather-label-big ">City: </label>
+			</div>
+			<div id="current-weather">
+				<label id="current-weather-label">Current Weather</label>
+				<div>
+					<label id="weather-name"></label>
+					<label id="weather-description"></label>
+				</div>
+	
+				<div id="weather-main">
+					<label id="temp-label" class="weather-main-label">Temp: </label><span id="temp" class="weather-main-span"></span>
+					<label id="pressure-label" class="weather-main-label">Pressure: </label><span id="pressure" class="weather-main-span"></span>
+					<label id="humidity-label" class="weather-main-label">Humidity: </label><span id="humidity" class="weather-main-span"></span>
+					<label id="cloud-label" class="weather-main-label">Cloud Cover: </label><span id="clouds" class="weather-main-span"></span>
+					<label id="wind-speed-label" class="weather-main-label">Wind Speed: </label><span id="wspeed" class="weather-main-span"></span>
+					<label id="wind-direction-label" class="weather-main-label">Wind Direction: </label><span id="wdirection" class="weather-main-span"></span>
+				</div>
+			</div>
+			<div id="hourly-weather">
+				<label class="weather-main-label">Cloud Coverage: </label>
+				<svg id="forcast-svg"></svg>
+			</div>
+		</div>
+
+</body>
+
+</html>
